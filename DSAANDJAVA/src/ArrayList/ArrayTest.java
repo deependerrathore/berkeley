@@ -11,6 +11,9 @@ public class ArrayTest {
 		a1.insertItem(6, 5);
 		a1.insertItem(7, 6);
 		a1.insertItem(8, 0);
+		a1.insertItem(9, 5);
+		a1.insertItem(10, 0);
+		//a1.insertItem(11, 0);			//Show Exception ArrayIndexOutOfBound		
 		
 		
 		for(int i = 0;i<10;i++){
