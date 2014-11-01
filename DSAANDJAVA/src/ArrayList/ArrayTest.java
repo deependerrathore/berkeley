@@ -13,10 +13,10 @@ public class ArrayTest {
 		a1.insertItem(8, 0);
 		a1.insertItem(9, 5);
 		a1.insertItem(10, 0);
-		//a1.insertItem(11, 0);			//Show Exception ArrayIndexOutOfBound		
+		a1.insertItem(11, 0);			//Dont show any Exception because new array is Created of duoble size	
 		
 		
-		for(int i = 0;i<10;i++){
+		for(int i = 0;i<a1.lastItem;i++){
 			System.out.println(a1.a[i]);
 		}
 	}
