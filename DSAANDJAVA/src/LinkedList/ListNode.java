@@ -14,11 +14,22 @@ public class ListNode {
 	public static void main(String[] args) {
 		ListNode l1 = new ListNode(7,new ListNode(0, new ListNode(7,null)));
 		l1.insertAfter(55);
-		
-		System.out.println(l1.item+ " " +l1.next.item + " "+l1.next.next.item+" "+l1.next.next.next.item);
+		l1.next.insertAfter(66);
+		System.out.println(l1.nth(3).item);
+		System.out.println(l1.item+ " " +l1.next.item + " "+l1.next.next.item+" "+l1.next.next.next.item+" "+l1.next.next.next.next.item);
 	}
 	
 	public void insertAfter(int item){
 		next = new ListNode(item,next);
+	}
+	
+	public ListNode nth(int position){
+		if(position == 1){
+			return this;
+		}else if((position<1) || (next == null)){
+			return null;
+		}else{
+			return next.nth(position -1); 
+		}
 	}
 }
