@@ -13,6 +13,12 @@ public class ListNode {
 	}
 	public static void main(String[] args) {
 		ListNode l1 = new ListNode(7,new ListNode(0, new ListNode(7,null)));
+		l1.insertAfter(55);
 		
+		System.out.println(l1.item+ " " +l1.next.item + " "+l1.next.next.item+" "+l1.next.next.next.item);
+	}
+	
+	public void insertAfter(int item){
+		next = new ListNode(item,next);
 	}
 }
